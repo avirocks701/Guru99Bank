@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="29852" started-at="2017-04-16T06:13:30Z" finished-at="2017-04-16T06:13:59Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="29852" started-at="2017-04-16T06:13:30Z" finished-at="2017-04-16T06:13:59Z">
+      <class name="com.testcase.LoginTestCase">
+        <test-method status="PASS" signature="MethodSetup()[pri:0, instance:com.testcase.LoginTestCase@66a3ffec]" name="MethodSetup" is-config="true" duration-ms="6566" started-at="2017-04-16T11:43:30Z" finished-at="2017-04-16T11:43:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MethodSetup -->
+        <test-method status="PASS" signature="MethodInvalidUserId()[pri:0, instance:com.testcase.LoginTestCase@66a3ffec]" name="MethodInvalidUserId" duration-ms="5626" started-at="2017-04-16T11:43:36Z" finished-at="2017-04-16T11:43:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MethodInvalidUserId -->
+        <test-method status="PASS" signature="MethodLogin()[pri:1, instance:com.testcase.LoginTestCase@66a3ffec]" name="MethodLogin" duration-ms="5740" started-at="2017-04-16T11:43:42Z" finished-at="2017-04-16T11:43:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MethodLogin -->
+        <test-method status="PASS" signature="MethodInvalidPassword()[pri:2, instance:com.testcase.LoginTestCase@66a3ffec]" name="MethodInvalidPassword" duration-ms="6084" started-at="2017-04-16T11:43:48Z" finished-at="2017-04-16T11:43:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MethodInvalidPassword -->
+        <test-method status="PASS" signature="MethodInvalidBoth()[pri:3, instance:com.testcase.LoginTestCase@66a3ffec]" name="MethodInvalidBoth" duration-ms="4787" started-at="2017-04-16T11:43:54Z" finished-at="2017-04-16T11:43:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MethodInvalidBoth -->
+        <test-method status="PASS" signature="QuitSession()[pri:0, instance:com.testcase.LoginTestCase@66a3ffec]" name="QuitSession" is-config="true" duration-ms="1025" started-at="2017-04-16T11:43:58Z" finished-at="2017-04-16T11:43:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- QuitSession -->
+      </class> <!-- com.testcase.LoginTestCase -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
