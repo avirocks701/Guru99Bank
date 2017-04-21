@@ -43,7 +43,7 @@ public class LoginTestCase {
 		
 		
 	}
-	@Test(priority=0)
+	@Test(priority=4)
 	public void MethodInvalidUserId() throws InterruptedException, IOException{
 		WebElementsAll wb= new WebElementsAll(Browser.driver);
 		ReadDataSheet data= new ReadDataSheet(Util.DataSheetPath);
@@ -82,13 +82,29 @@ public class LoginTestCase {
 		wb.Senduid(data.ReadFile("0", 0, 5));
 		wb.SendPassword(data.ReadFile("0", 1, 5));
 		wb.ClickbtnLogin();
+
+		
+	}
+	@Test(priority=0)
+	public void ChangePasswordValidation() throws InterruptedException{
+		WebElementsAll wb= new WebElementsAll(Browser.driver);
+		ReadDataSheet data= new ReadDataSheet(Util.DataSheetPath);
+		wb.Senduid(data.ReadFile("0", 0, 2));
+		wb.SendPassword(data.ReadFile("0", 1, 2));
+		wb.ClickbtnLogin();
+		wb.ChangePassword();
+		wb.OldPassword(data.ReadFile("0", 0, 6));
+		wb.NewPassword(data.ReadFile("0", 1, 6));
+		wb.ConfirmPassword(data.ReadFile("0", 2, 6));
+		wb.SubmitChangePassword();
 		String Alert=Browser.driver.switchTo().alert().getText();
 		Thread.sleep(2000);
 		Browser.driver.switchTo().alert().accept();
-		gbscr.GrabScreen1(Browser.driver, Util.destFilePath3);
-		Assert.assertEquals(Alert, "User or Password is not valid");
-		
+		//gbscr.GrabScreen1(Browser.driver, Util.destFilePath3);
+		Boolean dum1=Alert.contains("Old Password is incorrect");
+		Assert.assertTrue(dum1);
 	}
+	
 	
 	@AfterTest 
 	public void QuitSession(){

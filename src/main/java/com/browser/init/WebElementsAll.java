@@ -21,6 +21,11 @@ public class WebElementsAll {
 	By WelcomeText= By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr[2]/td/marquee");
 	By ManagersName= By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr[3]/td");
 	By LogOutBtn=By.xpath("/html/body/div[2]/div/ul/li[15]/a");
+	By ChangePassword=By.xpath("/html/body/div[2]/div/ul/li[11]/a");
+	By OldPassword=By.name("oldpassword");
+	By NewPassword =By.name("newpassword");
+	By ConfirmPassword= By.name("confirmpassword");
+	By SubmitChangePassword=By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr[7]/td[2]/input[1]");
 	
 	public WebElementsAll(WebDriver driver){
 		this.driver=driver;
@@ -50,5 +55,20 @@ public class WebElementsAll {
 	
 	public void LogOutBtn(){
 		driver.findElement(LogOutBtn).click();
+	}
+	public void ChangePassword(){
+		driver.findElement(ChangePassword).click();
+	}
+	public void OldPassword(String OldPass){
+		driver.findElement(OldPassword).sendKeys(OldPass);;
+	}
+	public void NewPassword(String NewPass){
+		driver.findElement(NewPassword).sendKeys(NewPass);
+	}
+	public void ConfirmPassword(String ConfPass){
+		driver.findElement(ConfirmPassword).sendKeys(ConfPass);	
+	}
+	public void SubmitChangePassword(){
+		driver.findElement(SubmitChangePassword).click();
 	}
 }
