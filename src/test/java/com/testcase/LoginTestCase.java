@@ -1,6 +1,7 @@
 package com.testcase;
 import java.io.IOException;
 
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -85,7 +86,7 @@ public class LoginTestCase {
 
 		
 	}
-	@Test(priority=0)
+	@Test(priority=7)
 	public void ChangePasswordValidation() throws InterruptedException{
 		WebElementsAll wb= new WebElementsAll(Browser.driver);
 		ReadDataSheet data= new ReadDataSheet(Util.DataSheetPath);
@@ -102,13 +103,39 @@ public class LoginTestCase {
 		Browser.driver.switchTo().alert().accept();
 		//gbscr.GrabScreen1(Browser.driver, Util.destFilePath3);
 		Boolean dum1=Alert.contains("Old Password is incorrect");
+		
 		Assert.assertTrue(dum1);
 	}
 	
+	@Test(priority=0)
 	
+	public void MethodAddCustomer(){
+		WebElementsAll wb = new WebElementsAll(Browser.driver);
+		ReadDataSheet data=new ReadDataSheet(Util.DataSheetPath);
+		wb.Senduid(data.ReadFile("0", 0, 2));
+		wb.SendPassword(data.ReadFile("0", 1, 2));
+		wb.ClickbtnLogin();
+		wb.NewCustomer();
+		wb.CustomerName(data.ReadFile("0", 0, 7));
+		wb.CustomerGender();
+		wb.CustomerDOB(data.ReadFile("0", 1, 7));
+		wb.CustomerAddress(data.ReadFile("0", 2, 7));
+		wb.CustomerCity(data.ReadFile("0", 3, 7));
+		wb.CustomerState(data.ReadFile("0", 4, 7));
+		wb.CustomerPIN(data.ReadFile("0", 5, 7));
+		wb.CustomerMobile(data.ReadFile("0", 6, 7));
+		wb.CustomerEmail(data.ReadFile("0", 7, 7));
+		wb.CustomerPassword(data.ReadFile("0", 8, 7));
+		wb.CustomerFormSubmit();
+		String ValEmail=Browser.driver.findElement(By.xpath("//*[@id='customer']/tbody/tr[13]/td[2]")).getText();
+		Assert.assertEquals(ValEmail, data.ReadFile("0", 7, 7));
+		System.out.println("Customer Created");
+		
+		
+	}
 	@AfterTest 
 	public void QuitSession(){
-		Browser.driver.quit();
+			Browser.driver.quit();
 	}
 
 }

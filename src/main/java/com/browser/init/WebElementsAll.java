@@ -21,11 +21,27 @@ public class WebElementsAll {
 	By WelcomeText= By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr[2]/td/marquee");
 	By ManagersName= By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr[3]/td");
 	By LogOutBtn=By.xpath("/html/body/div[2]/div/ul/li[15]/a");
+	////////////////////////////////////////////////////////////////
 	By ChangePassword=By.xpath("/html/body/div[2]/div/ul/li[11]/a");
 	By OldPassword=By.name("oldpassword");
 	By NewPassword =By.name("newpassword");
 	By ConfirmPassword= By.name("confirmpassword");
 	By SubmitChangePassword=By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr[7]/td[2]/input[1]");
+	By NewCustomer =By.xpath("/html/body/div[2]/div/ul/li[2]/a");
+	///////////////////////////////////////////////////////////////
+	By CustomerName=By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr[4]/td[2]/input");
+	By CustomerGender=By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr[5]/td[2]/input[1]");
+	By CustomerDOB=By.xpath("//*[@id='dob']");
+	By CustomerAddress=By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr[7]/td[2]/textarea");
+	By CustomerCity=By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr[8]/td[2]/input");
+	By CustomerState=By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr[9]/td[2]/input");
+	By CustomerPIN=By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr[10]/td[2]/input");
+	By CustomerMobile=By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr[11]/td[2]/input");
+	By CustomerEmail=By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr[12]/td[2]/input");
+	By CustomerPassword =By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr[13]/td[2]/input");
+	By CustomerFormSubmit=By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr[14]/td[2]/input[1]");
+	By CustomerFormReset=By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr[14]/td[2]/input[2]");
+	
 	
 	public WebElementsAll(WebDriver driver){
 		this.driver=driver;
@@ -70,5 +86,49 @@ public class WebElementsAll {
 	}
 	public void SubmitChangePassword(){
 		driver.findElement(SubmitChangePassword).click();
+	}
+	public void NewCustomer(){
+		driver.findElement(NewCustomer).click();
+	}
+	public void CustomerName(String name){
+		driver.findElement(CustomerName).sendKeys(name);
+	}
+	public void CustomerGender(){
+		if (driver.findElement(CustomerGender).isSelected()){
+			System.out.println("Male selected");
+		}
+		else
+		{
+			driver.findElement(CustomerGender).clear();
+		}
+			
+	}
+	public void CustomerDOB(String dob){
+		driver.findElement(CustomerDOB).sendKeys(dob);
+		
+	}
+	public void CustomerAddress(String Addr){
+		driver.findElement(CustomerAddress).sendKeys(Addr);
+	}
+	public void CustomerCity(String city){
+		driver.findElement(CustomerCity).sendKeys(city);
+	}
+	public void CustomerState(String state){
+		driver.findElement(CustomerState).sendKeys(state);
+	}
+	public void CustomerPIN(String pin){
+		driver.findElement(CustomerPIN).sendKeys(pin);
+	}
+	public void CustomerMobile(String number){
+		driver.findElement(CustomerMobile).sendKeys(number);
+	}
+	public void CustomerEmail(String email){
+		driver.findElement(CustomerEmail).sendKeys(email);
+	}
+	public void CustomerPassword(String pwd){
+		driver.findElement(CustomerPassword).sendKeys(pwd);
+	}
+	public void CustomerFormSubmit(){
+		driver.findElement(CustomerFormSubmit).click();
 	}
 }

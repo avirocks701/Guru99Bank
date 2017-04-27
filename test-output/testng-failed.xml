@@ -5,6 +5,7 @@
     <classes>
       <class name="com.testcase.LoginTestCase">
         <methods>
+          <include name="ChangePasswordValidation"/>
           <include name="MethodInvalidUserId"/>
           <include name="MethodSetup"/>
           <include name="MethodInvalidBoth"/>
