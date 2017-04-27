@@ -109,7 +109,7 @@ public class LoginTestCase {
 	
 	@Test(priority=0)
 	
-	public void MethodAddCustomer(){
+	public void MethodAddCustomer() throws IOException{
 		WebElementsAll wb = new WebElementsAll(Browser.driver);
 		ReadDataSheet data=new ReadDataSheet(Util.DataSheetPath);
 		wb.Senduid(data.ReadFile("0", 0, 2));
@@ -129,8 +129,9 @@ public class LoginTestCase {
 		wb.CustomerFormSubmit();
 		String ValEmail=Browser.driver.findElement(By.xpath("//*[@id='customer']/tbody/tr[13]/td[2]")).getText();
 		Assert.assertEquals(ValEmail, data.ReadFile("0", 7, 7));
-		System.out.println("Customer Created");
-		
+		String custID=Browser.driver.findElement(By.xpath("//*[@id='customer']/tbody/tr[4]/td[2]")).getText();
+		System.out.println("Customer Created, Account ID is "+custID);
+		data.WriteFile(custID);
 		
 	}
 	@AfterTest 

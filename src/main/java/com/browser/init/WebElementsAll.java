@@ -1,6 +1,7 @@
 package com.browser.init;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
 
 
 /**
@@ -27,8 +28,9 @@ public class WebElementsAll {
 	By NewPassword =By.name("newpassword");
 	By ConfirmPassword= By.name("confirmpassword");
 	By SubmitChangePassword=By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr[7]/td[2]/input[1]");
-	By NewCustomer =By.xpath("/html/body/div[2]/div/ul/li[2]/a");
+	
 	///////////////////////////////////////////////////////////////
+	By NewCustomer =By.xpath("/html/body/div[2]/div/ul/li[2]/a");
 	By CustomerName=By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr[4]/td[2]/input");
 	By CustomerGender=By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr[5]/td[2]/input[1]");
 	By CustomerDOB=By.xpath("//*[@id='dob']");
@@ -41,7 +43,12 @@ public class WebElementsAll {
 	By CustomerPassword =By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr[13]/td[2]/input");
 	By CustomerFormSubmit=By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr[14]/td[2]/input[1]");
 	By CustomerFormReset=By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr[14]/td[2]/input[2]");
-	
+	///////////////////////////////////////////////////////////////////
+	By NewAccount =By.xpath("/html/body/div[2]/div/ul/li[5]/a");
+	By CurrentAmmount=By.xpath("//*[@id='account']/tbody/tr[10]/td[2]");
+	By AccountCustomerID= By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr[2]/td[2]/input");
+	By SelectSavingsAccountType=By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr[3]/td[2]/select");
+	By AccountInitialDeposit=By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr[4]/td[2]/input");
 	
 	public WebElementsAll(WebDriver driver){
 		this.driver=driver;
@@ -130,5 +137,25 @@ public class WebElementsAll {
 	}
 	public void CustomerFormSubmit(){
 		driver.findElement(CustomerFormSubmit).click();
+	}
+	
+	public void NewAccount(){
+		driver.findElement(NewAccount).click();
+	}
+	public void AccountCustomerID(String CustID){
+		driver.findElement(AccountCustomerID).sendKeys(CustID);
+	}
+	public void SelectSavingsAccountType(Boolean savings){
+		Select accntType= new Select(driver.findElement(SelectSavingsAccountType));
+		if(savings==true)
+			accntType.selectByIndex(0);
+		else
+			accntType.selectByIndex(1);
+	}
+	public void AccountInitialDeposit(String ammount){
+		driver.findElement(AccountInitialDeposit).sendKeys(ammount);
+	}
+	public String CurrentAmmount(){
+		return driver.findElement(CurrentAmmount).getText();
 	}
 }
