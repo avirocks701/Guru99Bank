@@ -1,86 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="6" ignored="0" total="6" passed="0">
+<testng-results skipped="0" failed="6" ignored="0" total="7" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="66877" started-at="2017-04-27T19:20:03Z" finished-at="2017-04-27T19:21:10Z">
+  <suite name="Default suite" duration-ms="78876" started-at="2017-04-28T18:53:36Z" finished-at="2017-04-28T18:54:55Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="66877" started-at="2017-04-27T19:20:03Z" finished-at="2017-04-27T19:21:10Z">
+    <test name="Default test" duration-ms="78876" started-at="2017-04-28T18:53:36Z" finished-at="2017-04-28T18:54:55Z">
       <class name="com.testcase.LoginTestCase">
-        <test-method status="PASS" signature="MethodSetup()[pri:0, instance:com.testcase.LoginTestCase@66a3ffec]" name="MethodSetup" is-config="true" duration-ms="8293" started-at="2017-04-28T00:50:03Z" finished-at="2017-04-28T00:50:11Z">
+        <test-method status="PASS" signature="MethodSetup()[pri:0, instance:com.testcase.LoginTestCase@66a3ffec]" name="MethodSetup" is-config="true" duration-ms="7090" started-at="2017-04-29T00:23:36Z" finished-at="2017-04-29T00:23:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MethodSetup -->
-        <test-method status="FAIL" signature="MethodAddCustomer()[pri:0, instance:com.testcase.LoginTestCase@66a3ffec]" name="MethodAddCustomer" duration-ms="6997" started-at="2017-04-28T00:50:11Z" finished-at="2017-04-28T00:50:18Z">
-          <exception class="java.io.FileNotFoundException">
-            <message>
-              <![CDATA[D:\Test.xlsx (The process cannot access the file because it is being used by another process)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.io.FileNotFoundException: D:\Test.xlsx (The process cannot access the file because it is being used by another process)
-	at java.io.FileOutputStream.open0(Native Method)
-	at java.io.FileOutputStream.open(FileOutputStream.java:270)
-	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
-	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
-	at com.browser.init.ReadDataSheet.WriteFile(ReadDataSheet.java:49)
-	at com.testcase.LoginTestCase.MethodAddCustomer(LoginTestCase.java:134)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.io.FileNotFoundException -->
+        <test-method status="PASS" signature="MethodNewAccount()[pri:0, instance:com.testcase.LoginTestCase@66a3ffec]" name="MethodNewAccount" duration-ms="10127" started-at="2017-04-29T00:23:43Z" finished-at="2017-04-29T00:23:53Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- MethodAddCustomer -->
-        <test-method status="FAIL" signature="MethodLogin()[pri:1, instance:com.testcase.LoginTestCase@66a3ffec]" name="MethodLogin" duration-ms="10159" started-at="2017-04-28T00:50:18Z" finished-at="2017-04-28T00:50:28Z">
+        </test-method> <!-- MethodNewAccount -->
+        <test-method status="FAIL" signature="MethodLogin()[pri:1, instance:com.testcase.LoginTestCase@66a3ffec]" name="MethodLogin" duration-ms="10132" started-at="2017-04-29T00:23:53Z" finished-at="2017-04-29T00:24:03Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"name","selector":"uid"}
   (Session info: chrome=58.0.3029.81)
   (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.11 seconds
+Command duration or timeout: 10.09 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
-System info: host: 'LAPTOP-6H8A5GTK', ip: '192.168.43.108', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+System info: host: 'LAPTOP-6H8A5GTK', ip: '192.168.0.30', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\Avinash\AppData\Local\Temp\scoped_dir13148_25585}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.81, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 1001ba4e297b34eca7c8b1292da067a6
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\Avinash\AppData\Local\Temp\scoped_dir8604_30402}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.81, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 229bd5a8ca454abd62792ef12a8bc866
 *** Element info: {Using=name, value=uid}]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"name","selector":"uid"}
   (Session info: chrome=58.0.3029.81)
   (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.11 seconds
+Command duration or timeout: 10.09 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
-System info: host: 'LAPTOP-6H8A5GTK', ip: '192.168.43.108', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+System info: host: 'LAPTOP-6H8A5GTK', ip: '192.168.0.30', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\Avinash\AppData\Local\Temp\scoped_dir13148_25585}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.81, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 1001ba4e297b34eca7c8b1292da067a6
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\Avinash\AppData\Local\Temp\scoped_dir8604_30402}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.81, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 229bd5a8ca454abd62792ef12a8bc866
 *** Element info: {Using=name, value=uid}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -93,7 +53,7 @@ Session ID: 1001ba4e297b34eca7c8b1292da067a6
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:452)
 	at org.openqa.selenium.By$ByName.findElement(By.java:303)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at com.browser.init.WebElementsAll.Senduid(WebElementsAll.java:51)
+	at com.browser.init.WebElementsAll.Senduid(WebElementsAll.java:60)
 	at com.testcase.LoginTestCase.MethodLogin(LoginTestCase.java:33)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -126,32 +86,32 @@ Session ID: 1001ba4e297b34eca7c8b1292da067a6
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MethodLogin -->
-        <test-method status="FAIL" signature="MethodInvalidPassword()[pri:2, instance:com.testcase.LoginTestCase@66a3ffec]" name="MethodInvalidPassword" duration-ms="10071" started-at="2017-04-28T00:50:28Z" finished-at="2017-04-28T00:50:38Z">
+        <test-method status="FAIL" signature="MethodInvalidPassword()[pri:2, instance:com.testcase.LoginTestCase@66a3ffec]" name="MethodInvalidPassword" duration-ms="10083" started-at="2017-04-29T00:24:03Z" finished-at="2017-04-29T00:24:13Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"name","selector":"uid"}
   (Session info: chrome=58.0.3029.81)
   (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.03 seconds
+Command duration or timeout: 10.05 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
-System info: host: 'LAPTOP-6H8A5GTK', ip: '192.168.43.108', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+System info: host: 'LAPTOP-6H8A5GTK', ip: '192.168.0.30', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\Avinash\AppData\Local\Temp\scoped_dir13148_25585}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.81, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 1001ba4e297b34eca7c8b1292da067a6
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\Avinash\AppData\Local\Temp\scoped_dir8604_30402}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.81, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 229bd5a8ca454abd62792ef12a8bc866
 *** Element info: {Using=name, value=uid}]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"name","selector":"uid"}
   (Session info: chrome=58.0.3029.81)
   (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.03 seconds
+Command duration or timeout: 10.05 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
-System info: host: 'LAPTOP-6H8A5GTK', ip: '192.168.43.108', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+System info: host: 'LAPTOP-6H8A5GTK', ip: '192.168.0.30', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\Avinash\AppData\Local\Temp\scoped_dir13148_25585}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.81, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 1001ba4e297b34eca7c8b1292da067a6
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\Avinash\AppData\Local\Temp\scoped_dir8604_30402}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.81, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 229bd5a8ca454abd62792ef12a8bc866
 *** Element info: {Using=name, value=uid}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -164,7 +124,7 @@ Session ID: 1001ba4e297b34eca7c8b1292da067a6
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:452)
 	at org.openqa.selenium.By$ByName.findElement(By.java:303)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at com.browser.init.WebElementsAll.Senduid(WebElementsAll.java:51)
+	at com.browser.init.WebElementsAll.Senduid(WebElementsAll.java:60)
 	at com.testcase.LoginTestCase.MethodInvalidPassword(LoginTestCase.java:68)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -197,32 +157,32 @@ Session ID: 1001ba4e297b34eca7c8b1292da067a6
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MethodInvalidPassword -->
-        <test-method status="FAIL" signature="MethodInvalidBoth()[pri:3, instance:com.testcase.LoginTestCase@66a3ffec]" name="MethodInvalidBoth" duration-ms="10067" started-at="2017-04-28T00:50:38Z" finished-at="2017-04-28T00:50:48Z">
+        <test-method status="FAIL" signature="MethodInvalidBoth()[pri:3, instance:com.testcase.LoginTestCase@66a3ffec]" name="MethodInvalidBoth" duration-ms="10043" started-at="2017-04-29T00:24:13Z" finished-at="2017-04-29T00:24:23Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"name","selector":"uid"}
   (Session info: chrome=58.0.3029.81)
   (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.02 seconds
+Command duration or timeout: 10.01 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
-System info: host: 'LAPTOP-6H8A5GTK', ip: '192.168.43.108', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+System info: host: 'LAPTOP-6H8A5GTK', ip: '192.168.0.30', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\Avinash\AppData\Local\Temp\scoped_dir13148_25585}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.81, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 1001ba4e297b34eca7c8b1292da067a6
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\Avinash\AppData\Local\Temp\scoped_dir8604_30402}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.81, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 229bd5a8ca454abd62792ef12a8bc866
 *** Element info: {Using=name, value=uid}]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"name","selector":"uid"}
   (Session info: chrome=58.0.3029.81)
   (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.02 seconds
+Command duration or timeout: 10.01 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
-System info: host: 'LAPTOP-6H8A5GTK', ip: '192.168.43.108', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+System info: host: 'LAPTOP-6H8A5GTK', ip: '192.168.0.30', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\Avinash\AppData\Local\Temp\scoped_dir13148_25585}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.81, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 1001ba4e297b34eca7c8b1292da067a6
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\Avinash\AppData\Local\Temp\scoped_dir8604_30402}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.81, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 229bd5a8ca454abd62792ef12a8bc866
 *** Element info: {Using=name, value=uid}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -235,7 +195,7 @@ Session ID: 1001ba4e297b34eca7c8b1292da067a6
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:452)
 	at org.openqa.selenium.By$ByName.findElement(By.java:303)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at com.browser.init.WebElementsAll.Senduid(WebElementsAll.java:51)
+	at com.browser.init.WebElementsAll.Senduid(WebElementsAll.java:60)
 	at com.testcase.LoginTestCase.MethodInvalidBoth(LoginTestCase.java:83)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -268,32 +228,32 @@ Session ID: 1001ba4e297b34eca7c8b1292da067a6
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MethodInvalidBoth -->
-        <test-method status="FAIL" signature="MethodInvalidUserId()[pri:4, instance:com.testcase.LoginTestCase@66a3ffec]" name="MethodInvalidUserId" duration-ms="10046" started-at="2017-04-28T00:50:48Z" finished-at="2017-04-28T00:50:58Z">
+        <test-method status="FAIL" signature="MethodInvalidUserId()[pri:4, instance:com.testcase.LoginTestCase@66a3ffec]" name="MethodInvalidUserId" duration-ms="10111" started-at="2017-04-29T00:24:23Z" finished-at="2017-04-29T00:24:34Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"name","selector":"uid"}
   (Session info: chrome=58.0.3029.81)
   (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.02 seconds
+Command duration or timeout: 10.07 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
-System info: host: 'LAPTOP-6H8A5GTK', ip: '192.168.43.108', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+System info: host: 'LAPTOP-6H8A5GTK', ip: '192.168.0.30', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\Avinash\AppData\Local\Temp\scoped_dir13148_25585}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.81, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 1001ba4e297b34eca7c8b1292da067a6
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\Avinash\AppData\Local\Temp\scoped_dir8604_30402}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.81, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 229bd5a8ca454abd62792ef12a8bc866
 *** Element info: {Using=name, value=uid}]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"name","selector":"uid"}
   (Session info: chrome=58.0.3029.81)
   (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.02 seconds
+Command duration or timeout: 10.07 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
-System info: host: 'LAPTOP-6H8A5GTK', ip: '192.168.43.108', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+System info: host: 'LAPTOP-6H8A5GTK', ip: '192.168.0.30', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\Avinash\AppData\Local\Temp\scoped_dir13148_25585}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.81, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 1001ba4e297b34eca7c8b1292da067a6
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\Avinash\AppData\Local\Temp\scoped_dir8604_30402}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.81, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 229bd5a8ca454abd62792ef12a8bc866
 *** Element info: {Using=name, value=uid}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -306,7 +266,7 @@ Session ID: 1001ba4e297b34eca7c8b1292da067a6
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:452)
 	at org.openqa.selenium.By$ByName.findElement(By.java:303)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at com.browser.init.WebElementsAll.Senduid(WebElementsAll.java:51)
+	at com.browser.init.WebElementsAll.Senduid(WebElementsAll.java:60)
 	at com.testcase.LoginTestCase.MethodInvalidUserId(LoginTestCase.java:51)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -339,32 +299,32 @@ Session ID: 1001ba4e297b34eca7c8b1292da067a6
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MethodInvalidUserId -->
-        <test-method status="FAIL" signature="ChangePasswordValidation()[pri:7, instance:com.testcase.LoginTestCase@66a3ffec]" name="ChangePasswordValidation" duration-ms="10107" started-at="2017-04-28T00:50:58Z" finished-at="2017-04-28T00:51:09Z">
+        <test-method status="FAIL" signature="ChangePasswordValidation()[pri:7, instance:com.testcase.LoginTestCase@66a3ffec]" name="ChangePasswordValidation" duration-ms="10103" started-at="2017-04-29T00:24:34Z" finished-at="2017-04-29T00:24:44Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"name","selector":"uid"}
   (Session info: chrome=58.0.3029.81)
   (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.08 seconds
+Command duration or timeout: 10.07 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
-System info: host: 'LAPTOP-6H8A5GTK', ip: '192.168.43.108', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+System info: host: 'LAPTOP-6H8A5GTK', ip: '192.168.0.30', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\Avinash\AppData\Local\Temp\scoped_dir13148_25585}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.81, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 1001ba4e297b34eca7c8b1292da067a6
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\Avinash\AppData\Local\Temp\scoped_dir8604_30402}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.81, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 229bd5a8ca454abd62792ef12a8bc866
 *** Element info: {Using=name, value=uid}]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"name","selector":"uid"}
   (Session info: chrome=58.0.3029.81)
   (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.08 seconds
+Command duration or timeout: 10.07 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
-System info: host: 'LAPTOP-6H8A5GTK', ip: '192.168.43.108', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+System info: host: 'LAPTOP-6H8A5GTK', ip: '192.168.0.30', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\Avinash\AppData\Local\Temp\scoped_dir13148_25585}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.81, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 1001ba4e297b34eca7c8b1292da067a6
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\Avinash\AppData\Local\Temp\scoped_dir8604_30402}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.81, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 229bd5a8ca454abd62792ef12a8bc866
 *** Element info: {Using=name, value=uid}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -377,7 +337,7 @@ Session ID: 1001ba4e297b34eca7c8b1292da067a6
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:452)
 	at org.openqa.selenium.By$ByName.findElement(By.java:303)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at com.browser.init.WebElementsAll.Senduid(WebElementsAll.java:51)
+	at com.browser.init.WebElementsAll.Senduid(WebElementsAll.java:60)
 	at com.testcase.LoginTestCase.ChangePasswordValidation(LoginTestCase.java:93)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -410,7 +370,78 @@ Session ID: 1001ba4e297b34eca7c8b1292da067a6
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ChangePasswordValidation -->
-        <test-method status="PASS" signature="QuitSession()[pri:0, instance:com.testcase.LoginTestCase@66a3ffec]" name="QuitSession" is-config="true" duration-ms="1088" started-at="2017-04-28T00:51:09Z" finished-at="2017-04-28T00:51:10Z">
+        <test-method status="FAIL" signature="MethodAddCustomer()[pri:8, instance:com.testcase.LoginTestCase@66a3ffec]" name="MethodAddCustomer" duration-ms="10089" started-at="2017-04-29T00:24:44Z" finished-at="2017-04-29T00:24:54Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"name","selector":"uid"}
+  (Session info: chrome=58.0.3029.81)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
+System info: host: 'LAPTOP-6H8A5GTK', ip: '192.168.0.30', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\Avinash\AppData\Local\Temp\scoped_dir8604_30402}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.81, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 229bd5a8ca454abd62792ef12a8bc866
+*** Element info: {Using=name, value=uid}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"name","selector":"uid"}
+  (Session info: chrome=58.0.3029.81)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
+System info: host: 'LAPTOP-6H8A5GTK', ip: '192.168.0.30', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\Avinash\AppData\Local\Temp\scoped_dir8604_30402}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.81, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 229bd5a8ca454abd62792ef12a8bc866
+*** Element info: {Using=name, value=uid}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:452)
+	at org.openqa.selenium.By$ByName.findElement(By.java:303)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at com.browser.init.WebElementsAll.Senduid(WebElementsAll.java:60)
+	at com.testcase.LoginTestCase.MethodAddCustomer(LoginTestCase.java:115)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MethodAddCustomer -->
+        <test-method status="PASS" signature="QuitSession()[pri:0, instance:com.testcase.LoginTestCase@66a3ffec]" name="QuitSession" is-config="true" duration-ms="1038" started-at="2017-04-29T00:24:54Z" finished-at="2017-04-29T00:24:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- QuitSession -->

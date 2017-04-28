@@ -107,7 +107,7 @@ public class LoginTestCase {
 		Assert.assertTrue(dum1);
 	}
 	
-	@Test(priority=0)
+	@Test(priority=8)
 	
 	public void MethodAddCustomer() throws IOException{
 		WebElementsAll wb = new WebElementsAll(Browser.driver);
@@ -131,9 +131,30 @@ public class LoginTestCase {
 		Assert.assertEquals(ValEmail, data.ReadFile("0", 7, 7));
 		String custID=Browser.driver.findElement(By.xpath("//*[@id='customer']/tbody/tr[4]/td[2]")).getText();
 		System.out.println("Customer Created, Account ID is "+custID);
-		data.WriteFile(custID);
+		data.WriteFile(custID,0,9);
+	}
+	
+	@Test(priority=0)
+	public void MethodNewAccount() throws InterruptedException, IOException{
+		WebElementsAll wb = new WebElementsAll(Browser.driver);
+		ReadDataSheet data=new ReadDataSheet(Util.DataSheetPath);
+		wb.Senduid(data.ReadFile("0", 0, 2));
+		wb.SendPassword(data.ReadFile("0", 1, 2));
+		wb.ClickbtnLogin();
+		wb.NewAccount();
+		wb.AccountCustomerID(data.ReadFile("0", 0, 9));
+		wb.SelectSavingsAccountType(true);
+		wb.AccountInitialDeposit("1000");
+		wb.NewAccountSubmit();
+		String AccID= wb.AccountID();
+		data.WriteFile(AccID,0,10);
+		Thread.sleep(5000);
+		String ValEmail=Browser.driver.findElement(By.xpath("//*[@id='account']/tbody/tr[7]/td[2]")).getText();
+		Assert.assertEquals(ValEmail, data.ReadFile("0", 7, 7));
+	
 		
 	}
+		
 	@AfterTest 
 	public void QuitSession(){
 			Browser.driver.quit();

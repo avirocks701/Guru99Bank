@@ -49,6 +49,8 @@ public class WebElementsAll {
 	By AccountCustomerID= By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr[2]/td[2]/input");
 	By SelectSavingsAccountType=By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr[3]/td[2]/select");
 	By AccountInitialDeposit=By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr[4]/td[2]/input");
+	By NewAccountSubmit =By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr[5]/td[2]/input[1]");
+	By AccountID=By.xpath("//*[@id='account']/tbody/tr[4]/td[2]");
 	
 	public WebElementsAll(WebDriver driver){
 		this.driver=driver;
@@ -157,5 +159,11 @@ public class WebElementsAll {
 	}
 	public String CurrentAmmount(){
 		return driver.findElement(CurrentAmmount).getText();
+	}
+	public String AccountID(){
+		return driver.findElement(AccountID).getText();
+	}
+	public void NewAccountSubmit(){
+		driver.findElement(NewAccountSubmit).click();
 	}
 }

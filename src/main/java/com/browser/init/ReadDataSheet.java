@@ -44,8 +44,8 @@ public class ReadDataSheet {
 		
 	}
 		
-	public void WriteFile(String custID) throws IOException{
-		sheet1.getRow(0).createCell(9).setCellValue(custID);
+	public void WriteFile(String custID, int row, int col) throws IOException{
+		sheet1.getRow(row).createCell(col).setCellValue(custID);
 		fo =new FileOutputStream(src);
 		wb.write(fo);
 		wb.close();
