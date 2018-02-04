@@ -1,7 +1,9 @@
 package com.browser.init;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 /**
@@ -15,6 +17,7 @@ import org.openqa.selenium.support.ui.Select;
 public class WebElementsAll {
 	
 	WebDriver driver;
+	WebDriverWait wait=new WebDriverWait(driver, 20);
 	By uid = By.name("uid");
 	By password = By.name("password");
 	By btnLogin= By.name("btnLogin");
@@ -57,7 +60,8 @@ public class WebElementsAll {
 	}
 	
 	public void Senduid(String Uid){
-		driver.findElement(uid).sendKeys(Uid);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(uid)).sendKeys(Uid);;
+		//driver.findElement(uid).sendKeys(Uid);
 	}
 	public void SendPassword(String Pwd){
 		driver.findElement(password).sendKeys(Pwd);

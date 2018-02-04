@@ -70,6 +70,7 @@ public class GUITest {
 			    JDialog d = new JDialog(frame, "Test Running", true);
 			    d.setLocationRelativeTo(frame);
 			    d.setVisible(true);
+			    
 		}});
 		
 		//panel.add(lable);

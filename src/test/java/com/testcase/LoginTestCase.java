@@ -1,12 +1,19 @@
 package com.testcase;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
+import org.testng.TestListenerAdapter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import org.testng.TestNG;
 import com.browser.init.*;
 /**
  * 
@@ -18,7 +25,18 @@ import com.browser.init.*;
  *Checking Fetch
  */
 public class LoginTestCase {
+	
+	
 	GrabScreen gbscr= new GrabScreen();
+	
+	/*@SuppressWarnings("deprecation")
+	public static void main(String[] args) {
+		TestListenerAdapter tla = new TestListenerAdapter();
+		TestNG testng = new TestNG();
+		testng.setTestClasses(new Class[] { LoginTestCase.class });
+		testng.addListener(tla);
+		testng.run();
+	}*/
 	@BeforeTest
 	public void MethodSetup(){
 		Browser browser =new Browser();
@@ -31,8 +49,9 @@ public class LoginTestCase {
 		WebElementsAll wb = new WebElementsAll(Browser.driver);
 		ReadDataSheet data=new ReadDataSheet(Util.DataSheetPath);
 		wb.Senduid(data.ReadFile("0", 0, 2));
+		Thread.sleep(5000);
 		wb.SendPassword(data.ReadFile("0", 1, 2));
-		wb.ClickbtnLogin();
+	/*	wb.ClickbtnLogin();
 		//Assert.assertEquals(Browser.driver.getTitle(), "Guru99 Bank Manager HomePage");
 		wb.WelcomeText();
 		Boolean dum=wb.ManagersName().contains(data.ReadFile("0", 0, 2));
@@ -140,7 +159,7 @@ public class LoginTestCase {
 		ReadDataSheet data=new ReadDataSheet(Util.DataSheetPath);
 		wb.Senduid(data.ReadFile("0", 0, 2));
 		wb.SendPassword(data.ReadFile("0", 1, 2));
-		wb.ClickbtnLogin();
+		/*wb.ClickbtnLogin();
 		wb.NewAccount();
 		wb.AccountCustomerID(data.ReadFile("0", 0, 9));
 		wb.SelectSavingsAccountType(true);
@@ -152,12 +171,16 @@ public class LoginTestCase {
 		String ValEmail=Browser.driver.findElement(By.xpath("//*[@id='account']/tbody/tr[7]/td[2]")).getText();
 		Assert.assertEquals(ValEmail, data.ReadFile("0", 7, 7));
 	
-		
-	}
+		*/
+	} 
 		
 	@AfterTest 
-	public void QuitSession(){
+			public void AfterTestMethod() throws IOException{
+			//LoggerClass log = new LoggerClass();
+			
 			Browser.driver.quit();
+			//log.LoggerClassMethod();
+			//java -jar name_of_your_jar.jar
 	}
 
 }
